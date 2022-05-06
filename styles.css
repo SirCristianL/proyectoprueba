@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@100&display=swap');
+
+
+:root {
+    --color-1: #4bb89d;
+    --color-1-dark: #3ea38a;
+    --color-white: #fff;
+    --gradient-1: linear-gradient(132.82deg, #248CC7 0%, #2434C7 96.77%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--gradient-1);
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    padding: 48px 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+/* ###### INPUTS ###### */
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+}
+.form-box label {
+    color: var(--color-white);
+    margin-bottom: 6px;
+    font-size: 1.4rem;
+}
+.form-box input {
+    font-size: 1.1rem;
+    padding: 12px;
+    border-radius: 4px;
+    border: 2px solid var(--color-white);
+    background-color: transparent;
+    color: var(--color-white);
+    outline: none;
+    transition: 0.25s all ease;
+}
+.form-box input:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-box input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* ###### BUTTONS ###### */
+
+button.btn {
+    font-size: 1.1rem;
+    padding: 13px 36px;
+    background: var(--color-1);
+    border-radius: 4px;
+    color: var(--color-white);
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    height: fit-content;
+    outline: none;
+    transition: 0.25s all ease;
+}
+button.btn:hover, button:focus-visible {
+    cursor: pointer;
+    transform: translate(0px, -6px);
+    box-shadow: 0px 6px 0px 0px rgba(116, 202, 181, 0.5);
+}
+button.btn:active {
+    background: var(--color-1-dark);
+}
+
+button.btn.btn-lg {
+    padding: 26px 48px;
+    border-radius: 8px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+button.btn.btn-primary {
+    background-color: var(--color-white);
+    color: var(--color-1-dark);
+}
+
+
+/* ###### GRIDS ###### */
+
+.grid-form {
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+
+.participants-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 36px;
+}
+
+
+/* ###### COMPONENTS ###### */
+
+.participant-item {
+    padding: 8px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 4px;
+    font-size: 1.2rem;
+    color: var(--color-white);
+    margin-right: 12px;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+}
+.participant-item i {
+    margin-left: 8px;
+}
+.participant-item i:hover {
+    cursor: pointer;
+}
+
+
+/* ###### MEDIA QUERIES ###### */
+
+@media (max-width: 576px) {
+    .grid-form {
+        grid-template-columns: 1fr;
+    }
+}

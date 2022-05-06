@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.min.css">
+    <script src="https://kit.fontawesome.com/0676165871.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <link href="./styles.css" rel="stylesheet">
+    <title>Sorteo</title>
+</head>
+<body>
+    <div class="container">
+        <div class="grid-form">
+            <div class="form-box">
+                <label>Participantes</label>
+                <input type="text" id="participant-input" placeholder="Ejemplo">
+            </div>
+            <button class="btn btn-primary" onclick="addParticipant()">Agregar</button>
+        </div>
+        <div class="participants-list" id="participants-list">
+            <div class="participant-item" style="display: none;">
+                <span>Pepe</span>
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <button class="btn btn-lg mt-auto" onclick="sortear()">Sortear</button>
+    </div>
+</body>
+</html>
